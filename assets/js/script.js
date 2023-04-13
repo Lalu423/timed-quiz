@@ -3,16 +3,16 @@ var containerQuestionEl = document.getElementById("question-container");
 var containerStartEl = document.getElementById("starter-container");
 var containerEndEl = document.getElementById("end-container")
 var containerScoreEl = document.getElementById("score-banner")
-var formInitials = document.getElementById("initals-form")
+var formInitials = document.getElementById("initials-form")
 var containerHighScoresEl = document.getElementById("high-score-container")
-var ViewHighScoreEl = document.getElementById("view-high-scores")
+var viewHighScoreEl = document.getElementById("view-high-scores")
 var listHighScoreEl = document.getElementById("high-score-list")
 var correctEl = document.getElementById("correct")
 var wrongEl = document.getElementById("wrong")
 // buttons
 var btnStartEl = document.querySelector("#start-quiz")
 var btnGoBackEl = document.querySelector("#go-back")
-var btnClearScoresEl = document.querySelector("#clear-high-scores")
+var btnClearScoresEl = document.querySelector("#clear-high-score")
 
 //question variables for array
 var questionEl = document.getElementById("question")
@@ -25,7 +25,7 @@ timerEl.innerText = 0
 
 var HighScores = [];
 
-
+// Questions
 var arrayshuffledQuestions
 var QuestionIndex = 0
 
@@ -153,6 +153,8 @@ var answerCheck = function (event) {
     var selectedanswer = event.target
     if (arrayshuffledQuestions[QuestionIndex].a === selectedanswer.innerText) {
         answerCorrect()
+        console.log("questions", arrayshuffledQuestions[QuestionIndex])
+        console.log("questions", arrayshuffledQuestions)
         score = score + 10
     }
 
@@ -163,7 +165,7 @@ var answerCheck = function (event) {
     };
 
     QuestionIndex++
-    if (arrayshuffledQuestions.length > QuestionIndex + 1) {
+    if (question.length > QuestionIndex) {
         setQuestion()
     }
     else {
@@ -184,9 +186,9 @@ var showScore = function () {
 
 var createHighScore = function (event) {
     event.preventDefault()
-    var intitals = document.querySelector("#initials").value;
+    var initials = document.querySelector("#initials").value;
     if (!initials) {
-        alert("Enter your Initials!");
+        alert("Enter Your Initials!");
         return;
 
     }
@@ -229,7 +231,7 @@ var loadHighScore = function () {
     LoadedHighScores = JSON.parse(LoadedHighScores);
     LoadedHighScores.sort((a, b) => { return b.score - a.score })
 
-    for (var i = o; i < LoadedHighScores.length; i++) {
+    for (var i = 0; i < LoadedHighScores.length; i++) {
         var highscoreEl = document.createElement("li");
         highscoreEl.className = "high-score";
         highscoreEl.innerText = LoadedHighScores[i].initials + "-" + LoadedHighScores[i].score;
@@ -282,7 +284,8 @@ btnStartEl.addEventListener("click", startGame)
 
 formInitials.addEventListener("submit", createHighScore)
 
-ViewHighScoreEl.addEventListener("click", displayHighScores)
+viewHighScoreEl.addEventListener("click", displayHighScores)
+
 
 btnGoBackEl.addEventListener("click", renderStartPage)
 
