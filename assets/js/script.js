@@ -161,7 +161,7 @@ var answerCheck = function (event) {
     else {
         answerWrong()
         score = score - 1;
-        timeleft = timeleft - 3;
+        timeleft = timeleft - 5;
     };
 
     QuestionIndex++

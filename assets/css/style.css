@@ -3,9 +3,9 @@
 }
 
 :root {
-    --primary: blue;
+    --primary: beige;
     --secondary: lightgrey;
-    --tertiary: gold;
+    --tertiary: orange;
     --white: white;
     font-size: 50%;
     
@@ -27,8 +27,8 @@ header {
     width: 75%;
 }
 
-#view-highscores:hover {
-    cursor:pointer;
+#view-high-scores:hover {
+    cursor: pointer;
     color: var(--tertiary);
 }
 
