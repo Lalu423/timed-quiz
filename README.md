@@ -6,11 +6,11 @@ This is my javascript quiz. The user should be able to take a timed quiz. There 
 
 ## Usage example
 
-<img src="https://github.com/Lalu423/password-generator/blob/main/assets/Images/passwordgen-sh.jpg" width="500"/>
+<img src="https://github.com/Lalu423/timed-quiz/blob/main/assets/images/quiz-sample.jpg" width="500"/>
 
-[Link to Repo](https://github.com/Lalu423/password-generator)
+[Link to Repo](https://github.com/Lalu423/timed-quiz)
 
-[Link to Site](https://lalu423.github.io/password-generator/)
+[Link to Site](https://lalu423.github.io/timed-quiz/)
 
 ## License
 

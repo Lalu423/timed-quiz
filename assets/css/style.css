@@ -4,7 +4,7 @@
 
 :root {
     --primary: beige;
-    --secondary: lightgrey;
+    --secondary: lightblue;
     --tertiary: orange;
     --white: white;
     font-size: 50%;
@@ -150,7 +150,7 @@ p {
 
 }
 
-.startend {
+.submit {
     width: 25%;
     margin-top: 10px;
 }
@@ -162,7 +162,7 @@ p {
     font-size: 20px;
 }
 
-.banner {
+/*.banner {
     font-size: 25px;
     text-align:center;
     color: beige;
@@ -177,7 +177,7 @@ p {
     text-align: center;
     padding-top: 5px;
 }
-
+*/
 ol {
     list-style-type: number;
 }

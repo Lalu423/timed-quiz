@@ -155,7 +155,7 @@ var answerCheck = function (event) {
         answerCorrect()
         console.log("questions", arrayshuffledQuestions[QuestionIndex])
         console.log("questions", arrayshuffledQuestions)
-        score = score + 10
+        score = score + 20
     }
 
     else {
