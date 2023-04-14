@@ -6,14 +6,14 @@
     --primary: beige;
     --secondary: lightblue;
     --tertiary: orange;
-    --white: white;
+    --othertext: black;
     font-size: 50%;
     
 }
 
 body {
     background: grey;
-    color: var(--secondary);
+    color: var(--othertext);
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -118,7 +118,7 @@ p {
 
 .btn {
     background: var(--secondary);
-    color: var(--white);
+    color: var(--othertext);
     padding: 10px;
     border-radius: 10px;
     border: none;
