@@ -11,11 +11,11 @@
 <body>
 
     <header>
-        <h4 id="view-high-scores">View High Scores</h4>
-        <h4 class="timer">Time: <span id="timer"></span></h4>
+        <h1 id="view-high-scores">View High Scores</h1>
+        <h1 class="timer">Time: <span id="timer"></span></h1>
     </header>
 
-    <div id="starter-container" class="show">
+    <div id="startgame-page" class="show">
         <div class="container start">
             <h1>Welcome to the Javascript Quiz</h1>
             <p>Answer the questions within the time limit, gain points with correct answers. If you are incorrect you will lose points and seconds off the clock!</p>
@@ -23,16 +23,16 @@
         </div>
     </div>
     
-    <div id="question-container" class="hide">
+    <div id="question-page" class="hide">
         <div class="container questions">
             <div id="question"></div>
             <div id="answer-buttons" class="btn-grid"></div>
         </div>
     </div>
 
-    <div id="end-container" class="hide">
-        <div class="container end">
-            <div id="score-banner">
+    <div id="results-page" class="hide">
+        <div class="container results">
+            <div id="score-display">
                 <h1>Congratulations!</h1>
             </div>
             <form id="initials-form" class="initials">
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div id="high-score-container" class="hide">
+    <div id="high-score-page" class="hide">
         <div class="high-scores container">
             <h1 class="high-scores">High Scores!</h1>
             <ol id="high-score-list" class="score-list"></ol>
