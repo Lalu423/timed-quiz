@@ -3,6 +3,8 @@
 ## Description 
 This is my javascript quiz. The user should be able to take a timed quiz. There is a start quiz button on the first page. Using javascript the user will be presented with questions within a time limit. Correct answers will display a correct element along with rewarding points. Incorrect answers will display an incorrect element and reduce the timer and subtract points from the total. Once completed the user will be presented with a=n input form and the option to submit their initials to a locally stored high score screen. 
 
+NOTE: there are some issues with the correct and incorrect display upon clicking the correct and incorrect buttons. 
+
 
 ## Usage example
 

@@ -1,4 +1,5 @@
 //variables for Id containers
+
 var containerQuestionEl = document.getElementById("question-page");
 var containerStartEl = document.getElementById("startgame-page");
 var containerResultsEl = document.getElementById("results-page")
@@ -9,12 +10,15 @@ var viewHighScoreEl = document.getElementById("view-high-scores")
 var listHighScoreEl = document.getElementById("high-score-list")
 var correctEl = document.getElementById("correct")
 var wrongEl = document.getElementById("incorrect")
+
 // buttons
+
 var btnStartEl = document.querySelector("#start-quiz")
 var btnGoBackEl = document.querySelector("#go-back")
 var btnClearScoresEl = document.querySelector("#clear-high-score")
 
 //question variables for array
+
 var questionEl = document.getElementById("question")
 var answerbuttonsEl = document.getElementById("answer-buttons")
 var timerEl = document.querySelector("#timer");
@@ -29,7 +33,7 @@ var HighScores = [];
 var arrayshuffledQuestions
 var QuestionIndex = 0
 
-
+//created questions with answers 
 var question = [
     {
         q: 'What tag is used in HTML to link your javascript file?',
@@ -57,7 +61,7 @@ var question = [
         choices: [{ choice: '1. 1999' }, { choice: '2. 2001' }, { choice: '3. 1995' }, { choice: '4. 1988' }]
     },
 ];
-
+//first page
 var renderStartPage = function () {
     containerHighScoresEl.classList.add("hide")
     containerHighScoresEl.classList.remove("show")
@@ -78,7 +82,7 @@ var renderStartPage = function () {
         wrongEl.classList.add("hide");
     }
 }
-
+//timer
 var setTime = function () {
     timeleft = 30;
 
@@ -96,7 +100,7 @@ var setTime = function () {
         }
     }, 1000)
 }
-
+//user clicks start quiz
 var startGame = function () {
     containerStartEl.classList.add('hide');
     containerStartEl.classList.remove('show');
@@ -106,19 +110,19 @@ var startGame = function () {
     setTime()
     setQuestion()
 }
-
+//picks starting question
 var setQuestion = function () {
     resetAnswers()
     displayQuestion(arrayshuffledQuestions[QuestionIndex])
 }
-
+//resets answer button
 var resetAnswers = function () {
     while (answerbuttonsEl.firstChild) {
         answerbuttonsEl.removeChild(answerbuttonsEl.firstChild)
 
     };
 };
-
+// shows questions
 var displayQuestion = function (index) {
     questionEl.innerText = index.q
     for (var i = 0; i < index.choices.length; i++) {
@@ -130,7 +134,7 @@ var displayQuestion = function (index) {
         answerbuttonsEl.appendChild(answerbutton)
     }
 };
-
+//answercheck for correct
 var answerCorrect = function () {
     if (correctEl.className = "hide") {
         correctEl.classList.remove("hide")
@@ -139,7 +143,7 @@ var answerCorrect = function () {
         wrongEl.classList.add("hide")
     }
 }
-
+//answer check for wrong
 var answerWrong = function () {
     if (wrongEl.className = "hide") {
         wrongEl.classList.remove("hide")
@@ -148,7 +152,7 @@ var answerWrong = function () {
         correctEl.classList.add('hide')
     }
 }
-
+//checks overall answer
 var answerCheck = function (event) {
     var selectedanswer = event.target
     if (arrayshuffledQuestions[QuestionIndex].a === selectedanswer.innerText) {
@@ -173,7 +177,7 @@ var answerCheck = function (event) {
         showScore();
     }
 }
-
+// shows score 
 var showScore = function () {
     containerQuestionEl.classList.add("hide");
     containerResultsEl.classList.remove("hide");
@@ -183,7 +187,7 @@ var showScore = function () {
     scoreDisplay.innerText = ("Your final score is " + score + "!");
     containerScoreEl.appendChild(scoreDisplay);
 }
-
+// generates highscore
 var createHighScore = function (event) {
     event.preventDefault()
     var initials = document.querySelector("#initials").value;
@@ -267,7 +271,7 @@ var displayHighScores = function () {
         wrongEl.classList.add("hide");
     }
 }
-
+// clear score button
 var clearScores = function () {
     HighScores = [];
 
@@ -279,7 +283,7 @@ var clearScores = function () {
 }
 
 loadHighScore()
-
+//button events
 btnStartEl.addEventListener("click", startGame)
 
 formInitials.addEventListener("submit", createHighScore)
