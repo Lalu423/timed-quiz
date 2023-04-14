@@ -1,14 +1,14 @@
 //variables for Id containers
 var containerQuestionEl = document.getElementById("question-page");
 var containerStartEl = document.getElementById("startgame-page");
-var containerEndEl = document.getElementById("results-page")
+var containerResultsEl = document.getElementById("results-page")
 var containerScoreEl = document.getElementById("score-display")
 var formInitials = document.getElementById("initials-form")
 var containerHighScoresEl = document.getElementById("high-score-page")
 var viewHighScoreEl = document.getElementById("view-high-scores")
 var listHighScoreEl = document.getElementById("high-score-list")
 var correctEl = document.getElementById("correct")
-var wrongEl = document.getElementById("wrong")
+var wrongEl = document.getElementById("incorrect")
 // buttons
 var btnStartEl = document.querySelector("#start-quiz")
 var btnGoBackEl = document.querySelector("#go-back")
@@ -176,8 +176,8 @@ var answerCheck = function (event) {
 
 var showScore = function () {
     containerQuestionEl.classList.add("hide");
-    containerEndEl.classList.remove("hide");
-    containerEndEl.classList.add("show");
+    containerResultsEl.classList.remove("hide");
+    containerResultsEl.classList.add("show");
 
     var scoreDisplay = document.createElement("p");
     scoreDisplay.innerText = ("Your final score is " + score + "!");
@@ -246,9 +246,9 @@ var displayHighScores = function () {
     containerHighScoresEl.classList.add("show");
     gameover = "true"
 
-    if (containerEndEl.className = "show") {
-        containerEndEl.classList.remove("show");
-        containerEndEl.classList.add("hide");
+    if (containerResultsEl.className = "show") {
+        containerResultsEl.classList.remove("show");
+        containerResultsEl.classList.add("hide");
     }
     if (containerStartEl.className = "show") {
         containerStartEl.classList.remove("show");
